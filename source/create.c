@@ -238,6 +238,7 @@ PGAContext *PGACreate ( int *argc, char **argv,
     ctx->ga.restart            = PGA_UNINITIALIZED_INT;
     ctx->ga.restartFreq        = PGA_UNINITIALIZED_INT;
     ctx->ga.restartAlleleProb  = PGA_UNINITIALIZED_DOUBLE;
+    ctx->user_data             = NULL;
 
     /* Operations */
     ctx->cops.CreateString      = NULL;

@@ -397,6 +397,7 @@ struct PGAContext {
     PGADebug               debug;
     PGAInitialize          init;
     PGAScratch             scratch;
+    void                  *user_data;
 };
 
 /*****************************************
