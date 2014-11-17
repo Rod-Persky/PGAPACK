@@ -81,7 +81,7 @@ void PGAPrintReport(PGAContext *ctx, FILE *fp, int pop)
      */
      if ((ctx->rep.PrintFreq >=0) && !(ctx->ga.iter % ctx->rep.PrintFreq))
 /*       fprintf (fp, "Iter #     Field      Value           Time\n");  */
-         fprintf (fp, "Iter #     Field      Value\n");
+         fprintf (fp, "\nIter #     Field      Value\n");
 
 
      best_p = PGAGetBestIndex(ctx, pop);
