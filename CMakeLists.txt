@@ -3,9 +3,9 @@ project("PGAPACK" C)
 
 find_package(MPI)
 if (MPI_FOUND)
-  option(PGAPACK_MPI "Enable PGAPACK MPI (All depending will require MPI)" ON)
+  option(MPI_PGAPACK_USEMPI "Enable PGAPACK MPI (All depending will require MPI)" OFF)
 else()
-  message(STATUS "PGAPACK_MPI: MPI is not available in current environment")
+  message(STATUS "MPI_PGAPACK_USEMPI: MPI is not available in current environment")
 endif()
 
 # Sources
@@ -21,7 +21,7 @@ add_definitions(-DWL=32)
 
 # Depending on presence of MPI change some options
 
-if (PGAPACK_MPI)
+if (MPI_PGAPACK_USEMPI)
   message(STATUS "PGAPACK: MPI enabled")
   
   # Remove fake MPI

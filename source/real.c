@@ -175,8 +175,7 @@ void PGASetRealInitPercent ( PGAContext *ctx, double *median, double *percent)
     PGACheckDataType("PGASetRealInitPercent", PGA_DATATYPE_REAL);
 
     stringlen = PGAGetStringLength(ctx);
-    for (i=0; i<stringlen; i++) {
-    }
+
     for (i=0; i<stringlen; i++) {
          offset = fabs(median[i] * percent[i]);
          ctx->init.RealMin[i] = median[i] - offset;
