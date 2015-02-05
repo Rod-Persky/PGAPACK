@@ -29,3 +29,4 @@
 *.hex
 
 include/mpi.h
+docs/user_guide.pdf
